@@ -1,0 +1,205 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\ss\Desktop\ggm
+vALU
+Z1 !s100 XYNL9[FYaL2Po6[k8<Ul30
+Z2 IPo7>f33oBkHe05Hk4P3[m1
+Z3 Vb=JSTEN=<nHja9@2[iTle1
+Z4 dC:\Users\ss\Desktop\CA2
+Z5 w1553845247
+Z6 8C:/Users/ss/Desktop/CA2/ALU.v
+Z7 FC:/Users/ss/Desktop/CA2/ALU.v
+L0 2
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA2/ALU.v|
+Z10 o-work work -O0
+Z11 n@a@l@u
+Z12 !s108 1555254841.856000
+Z13 !s107 C:/Users/ss/Desktop/CA2/ALU.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCPU_Controller
+Z14 !s100 D17I17A[BdU6[Qnhz2BCN2
+Z15 I3hYBV[[CzKadNc=3LBFTB2
+Z16 VE9iYD@>BY6cc0<GZXMg=z1
+R4
+Z17 w1555137464
+Z18 8C:/Users/ss/Desktop/CA2/CPU_Controller.v
+Z19 FC:/Users/ss/Desktop/CA2/CPU_Controller.v
+L0 2
+R8
+r1
+31
+Z20 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA2/CPU_Controller.v|
+R10
+Z21 n@c@p@u_@controller
+Z22 !s108 1555254842.060000
+Z23 !s107 C:/Users/ss/Desktop/CA2/CPU_Controller.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCPU_Data
+Z24 !s100 F5Hfi]X106h8ZEIJ<zIF22
+Z25 IfSF;c^S5^cGYdE:Mc:mZj1
+Z26 Vo1V8hh1d2WQCG5l_D[1g_0
+R4
+Z27 w1555143713
+Z28 8C:/Users/ss/Desktop/CA2/CPU_Datapath.v
+Z29 FC:/Users/ss/Desktop/CA2/CPU_Datapath.v
+L0 2
+R8
+r1
+31
+Z30 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA2/CPU_Datapath.v|
+R10
+Z31 n@c@p@u_@data
+Z32 !s108 1555254842.187000
+Z33 !s107 C:/Users/ss/Desktop/CA2/CPU_Datapath.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCPU_TEST
+Z34 IZ7cDbka;_Bd?AIU_z0cQ[3
+Z35 VI_bfnR[_>DoC1>cd73_371
+R4
+Z36 w1555254836
+Z37 8C:/Users/ss/Desktop/CA2/CPU_TEST.v
+Z38 FC:/Users/ss/Desktop/CA2/CPU_TEST.v
+L0 1
+R8
+r1
+31
+Z39 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA2/CPU_TEST.v|
+R10
+Z40 n@c@p@u_@t@e@s@t
+Z41 !s100 YjJoImP297F@iCjicj`HJ1
+Z42 !s108 1555254842.322000
+Z43 !s107 C:/Users/ss/Desktop/CA2/CPU_TEST.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCPU_top
+Z44 !s100 6YUSNO1>?iZ?;@3K73Qdg3
+Z45 IE0U:IEO[HJJe_J3f3jeh=1
+Z46 V;?7?VH1>]1@DP5SokXL053
+R4
+Z47 w1555048576
+Z48 8C:/Users/ss/Desktop/CA2/CPU_top.v
+Z49 FC:/Users/ss/Desktop/CA2/CPU_top.v
+L0 1
+R8
+r1
+31
+Z50 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA2/CPU_top.v|
+R10
+Z51 n@c@p@u_top
+Z52 !s108 1555254842.471000
+Z53 !s107 C:/Users/ss/Desktop/CA2/CPU_top.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vData_Memory
+Z54 !s100 X@5`:fDCSa__]D`QLi3NX0
+Z55 Iommife9?eUckiEXbY;lG:3
+Z56 V3TZX[XWGk3EKDX45C35bg2
+R4
+Z57 w1555058444
+Z58 8C:/Users/ss/Desktop/CA2/Data_Memory.v
+Z59 FC:/Users/ss/Desktop/CA2/Data_Memory.v
+L0 1
+R8
+r1
+31
+Z60 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA2/Data_Memory.v|
+R10
+Z61 n@data_@memory
+Z62 !s108 1555254842.607000
+Z63 !s107 C:/Users/ss/Desktop/CA2/Data_Memory.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInstruction_Memory
+Z64 !s100 aRC]:OIS@FC61Ll?=LLZd0
+Z65 I5hi;CDD=zIVjLe>_aDC@l1
+Z66 Vb4<KkZ380jb26f]_[^]ca2
+R4
+Z67 w1555134665
+Z68 8C:/Users/ss/Desktop/CA2/Instruction_Memory.v
+Z69 FC:/Users/ss/Desktop/CA2/Instruction_Memory.v
+L0 2
+R8
+r1
+31
+Z70 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA2/Instruction_Memory.v|
+R10
+Z71 n@instruction_@memory
+Z72 !s108 1555254842.750000
+Z73 !s107 C:/Users/ss/Desktop/CA2/Instruction_Memory.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vPC_Reg
+Z74 !s100 0O=iX3kofK8G;YK[FKUbo3
+Z75 IAgN3WB7@MzeYWdhlK2X2>2
+Z76 VQ;9b]@_H`1?zS^flK6lI82
+R4
+Z77 w1555143390
+Z78 8C:/Users/ss/Desktop/CA2/PC_Register.v
+Z79 FC:/Users/ss/Desktop/CA2/PC_Register.v
+L0 2
+R8
+r1
+31
+Z80 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA2/PC_Register.v|
+R10
+Z81 n@p@c_@reg
+!i10b 1
+!s85 0
+Z82 !s108 1555254842.900000
+Z83 !s107 C:/Users/ss/Desktop/CA2/PC_Register.v|
+!s101 -O0
+vRegister_File
+!i10b 1
+Z84 !s100 G@RbQMRWKRgXdg8jm:ME]1
+Z85 ImHdOV^UQT>M<iB]1Q9iKS3
+Z86 V=5CMbkUDOQ7e139NB=]n=3
+R4
+Z87 w1555254722
+Z88 8C:/Users/ss/Desktop/CA2/Register_File.v
+Z89 FC:/Users/ss/Desktop/CA2/Register_File.v
+L0 2
+R8
+r1
+!s85 0
+31
+!s108 1555254843.049000
+!s107 C:/Users/ss/Desktop/CA2/Register_File.v|
+Z90 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA2/Register_File.v|
+!s101 -O0
+R10
+Z91 n@register_@file
+vTEST_ALU
+Z92 !s100 ]0^[LclcU2>Y>EgZURaC=2
+Z93 IBXcA:AM1If=[O6lOk9gzW1
+Z94 V>8EC:olY_nQ8R:UDg`51i0
+R4
+Z95 w1553499436
+R6
+R7
+L0 55
+R8
+r1
+31
+Z96 !s108 1553764476.990000
+R13
+R9
+R10
+Z97 n@t@e@s@t_@a@l@u
+!i10b 1
+!s85 0
+!s101 -O0

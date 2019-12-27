@@ -1,0 +1,34 @@
+module Data_Memory(Address,
+                   Write_Data,
+                   MemRead,
+                   MemWrite,
+                   Read_Data);
+                   
+  
+  input[9:0] Address;
+  input[15:0] Write_Data;
+  input MemRead,MemWrite;
+  output reg[15:0] Read_Data;
+  reg[15:0] Data [9:0];
+  
+  
+  always@(*) begin
+    if(MemRead) begin
+      Read_Data = Data[Address];
+    end
+    
+  else if(
+    
+  end
+  
+  
+  
+  
+  
+  
+  
+  
+endmodule
+    
+    
+  

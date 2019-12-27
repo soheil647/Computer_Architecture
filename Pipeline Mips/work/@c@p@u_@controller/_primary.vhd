@@ -1,0 +1,61 @@
+library verilog;
+use verilog.vl_types.all;
+entity CPU_Controller is
+    generic(
+        Load            : vl_logic_vector(0 to 5) := (Hi1, Hi0, Hi0, Hi0, Hi1, Hi1);
+        Store           : vl_logic_vector(0 to 5) := (Hi1, Hi0, Hi1, Hi0, Hi1, Hi1);
+        \Jump\          : vl_logic_vector(0 to 5) := (Hi0, Hi0, Hi0, Hi0, Hi1, Hi0);
+        Brancheq        : vl_logic_vector(0 to 5) := (Hi0, Hi0, Hi0, Hi1, Hi0, Hi0);
+        Branchne        : vl_logic_vector(0 to 5) := (Hi0, Hi0, Hi0, Hi1, Hi0, Hi1);
+        RType           : vl_logic_vector(0 to 5) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi0);
+        NOP             : vl_logic_vector(0 to 5) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi1);
+        \Add\           : vl_logic_vector(0 to 5) := (Hi1, Hi0, Hi0, Hi0, Hi0, Hi0);
+        \Sub\           : vl_logic_vector(0 to 5) := (Hi1, Hi0, Hi0, Hi0, Hi1, Hi0);
+        \And\           : vl_logic_vector(0 to 5) := (Hi1, Hi0, Hi0, Hi1, Hi0, Hi0);
+        \Or\            : vl_logic_vector(0 to 5) := (Hi1, Hi0, Hi0, Hi1, Hi0, Hi1);
+        slt             : vl_logic_vector(0 to 5) := (Hi1, Hi0, Hi1, Hi0, Hi1, Hi0);
+        \JUMP\          : vl_logic_vector(0 to 1) := (Hi0, Hi1);
+        BNE             : vl_logic_vector(0 to 1) := (Hi1, Hi0);
+        BEZ             : vl_logic_vector(0 to 1) := (Hi1, Hi1);
+        \AND\           : vl_logic_vector(0 to 2) := (Hi0, Hi0, Hi0);
+        \OR\            : vl_logic_vector(0 to 2) := (Hi0, Hi0, Hi1);
+        \ADD\           : vl_logic_vector(0 to 2) := (Hi0, Hi1, Hi0);
+        \SUB\           : vl_logic_vector(0 to 2) := (Hi0, Hi1, Hi1);
+        \SLT\           : vl_logic_vector(0 to 2) := (Hi1, Hi0, Hi0)
+    );
+    port(
+        Opcode          : in     vl_logic_vector(5 downto 0);
+        \Function\      : in     vl_logic_vector(5 downto 0);
+        MemRead         : out    vl_logic;
+        MemWrite        : out    vl_logic;
+        ALUSrc          : out    vl_logic;
+        RegWrite        : out    vl_logic;
+        ALUOprand       : out    vl_logic_vector(2 downto 0);
+        Is_Br           : out    vl_logic;
+        Is_Imm          : out    vl_logic;
+        StoreOrBranch   : out    vl_logic;
+        BranchCommand   : out    vl_logic_vector(1 downto 0);
+        Rst             : in     vl_logic
+    );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of Load : constant is 1;
+    attribute mti_svvh_generic_type of Store : constant is 1;
+    attribute mti_svvh_generic_type of \Jump\ : constant is 1;
+    attribute mti_svvh_generic_type of Brancheq : constant is 1;
+    attribute mti_svvh_generic_type of Branchne : constant is 1;
+    attribute mti_svvh_generic_type of RType : constant is 1;
+    attribute mti_svvh_generic_type of NOP : constant is 1;
+    attribute mti_svvh_generic_type of \Add\ : constant is 1;
+    attribute mti_svvh_generic_type of \Sub\ : constant is 1;
+    attribute mti_svvh_generic_type of \And\ : constant is 1;
+    attribute mti_svvh_generic_type of \Or\ : constant is 1;
+    attribute mti_svvh_generic_type of slt : constant is 1;
+    attribute mti_svvh_generic_type of \JUMP\ : constant is 1;
+    attribute mti_svvh_generic_type of BNE : constant is 1;
+    attribute mti_svvh_generic_type of BEZ : constant is 1;
+    attribute mti_svvh_generic_type of \AND\ : constant is 1;
+    attribute mti_svvh_generic_type of \OR\ : constant is 1;
+    attribute mti_svvh_generic_type of \ADD\ : constant is 1;
+    attribute mti_svvh_generic_type of \SUB\ : constant is 1;
+    attribute mti_svvh_generic_type of \SLT\ : constant is 1;
+end CPU_Controller;

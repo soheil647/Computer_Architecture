@@ -1,0 +1,25 @@
+module register16b (
+	clk,
+	rst,
+	En,
+	regIn,
+	regOut
+);
+	input clk;
+	input rst;
+	input En;
+	input [15:0] regIn;
+	output reg [15:0] regOut;
+	
+	always @(posedge clk,posedge rst) begin
+		if(rst)
+			regOut <= 16'b0;
+		else begin
+			if(En==1)
+				regOut <= regIn;
+		end
+
+	end
+
+endmodule
+

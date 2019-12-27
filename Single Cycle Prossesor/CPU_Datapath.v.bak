@@ -1,0 +1,77 @@
+
+module CPU_Data(Branch,
+                JumpControl,
+                MemRead,
+                MemWrite,
+                WriteControl,
+                ALUOperation,
+                ALUSrc,
+                RegWrite,
+                WndSelect,
+                Clk,
+                Rst);
+                
+  input  Branch, JumpControl, MemRead, MemWrite, ALUSrc, Clk,Rst;
+  input[1:0] WriteControl,WndSelect;
+  input[1:0] ALUOperation;
+  
+  wire[9:0] PC_Next,PC,PCPluse,PC_Oprand;
+  wire Clk,Rst;
+  wire[15:0] Instruction;
+  wire[3:0] WriteingReg;
+  wire[15:0] AddresssSignExtend,ALUOprand2,Memory_Data,Write_DataReg;
+  wire[9:0] MemoryAddress;
+  wire BranchControl,Zero;
+  wire[1:0] WndSel;
+  
+  
+  PC_Reg R1  (PC_Next,
+              Clk,
+              Rst,
+              PC);
+  
+  assign PCPluse = PC + 4;
+  
+  assign BranchControl = (Zero & Branch)?1:0;
+  
+  assign PC_Oprand = BranchControl?{{2'b00},Instruction[7:0]}:PCPluse;
+  
+  assign PC_Next = JumpControl?Instruction[9:0]:PC_Oprand;         
+  
+  Instruction_Memory Ins (PC,
+                          Instruction);
+                          
+    
+                          
+  Register_File R_File(Instruction[11:10],
+                       Instruction[9:8],
+                       Instruction[11:10],
+                       Write_DataReg,
+                       WndSelect,
+                       Clk,
+                       RegWrite,
+                       Read_Data1,
+                       Read_Data2);
+                       
+                       
+ assign AddresssSignExtend = {{8{Instruction[9]}},Instruction[7:0]};  
+ 
+ assign ALUOprand2 = ALUSrc?AddresssSignExtend:Read_Data2;                    
+                       
+                       
+ ALU Logic(Read_Data1,
+           ALUOprand2,
+           ALUOperation,
+           ALUresult,
+           Zero);
+           
+           
+ Data_Memory M1   (Instruction[9:0],
+                   Read_Data1,
+                   MemRead,
+                   MemWrite,
+                   Memory_Data);
+  
+  assign Write_DataReg = (WriteControl==2'b00)?Memory_Data:(WriteControl==2'b01)?ALUresult:(WriteControl==2'b10)?Read_Data2:(WriteControl==2'b11)?(~Read_Data2):0; 
+  
+endmodule

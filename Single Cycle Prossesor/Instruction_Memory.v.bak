@@ -1,0 +1,19 @@
+
+module Instruction_Memory(Address,
+                          Instruction);
+                          
+                          
+  input[9:0] Address;
+  output reg Instruction;
+  
+  reg[15:0] Data[9:0];
+  
+  
+  
+  always@(*) begin
+    Instruction = Data[Address];
+  end
+  
+              
+  
+endmodule

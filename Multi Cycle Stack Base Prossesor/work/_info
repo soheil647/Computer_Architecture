@@ -1,0 +1,221 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vALU
+Z1 I2[MeC]OPKBQiZ8325mi@k2
+Z2 V[5[6R<nj1Zh=VQG11ZnVe2
+Z3 dC:\Users\ss\Desktop\CA3\CA3
+Z4 w1557732913
+Z5 8C:/Users/ss/Desktop/CA3/CA3/ALU.v
+Z6 FC:/Users/ss/Desktop/CA3/CA3/ALU.v
+L0 2
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@a@l@u
+Z10 !s100 :=D@GkL_jL:b3^a_PI]1]0
+Z11 !s108 1559121843.172000
+Z12 !s107 C:/Users/ss/Desktop/CA3/CA3/ALU.v|
+Z13 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA3/CA3/ALU.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCPU_TB
+Z14 I964a7]Z?0Sd<[=O`[iR^W1
+Z15 VFbfWPSj`YBINBC>3SRbY_1
+R3
+Z16 w1557731050
+Z17 8C:/Users/ss/Desktop/CA3/CA3/CPU_TB.v
+Z18 FC:/Users/ss/Desktop/CA3/CA3/CPU_TB.v
+L0 1
+R7
+r1
+31
+R8
+Z19 n@c@p@u_@t@b
+Z20 !s100 zEdAM]mLJ7==h;a`5[A>Y3
+Z21 !s108 1559121843.488000
+Z22 !s107 C:/Users/ss/Desktop/CA3/CA3/CPU_TB.v|
+Z23 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA3/CA3/CPU_TB.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCPU_Top
+Z24 I;MaM7?bMZ5^O?h3Km>3ML1
+Z25 VBF7Y]WGYCg:Vl9:_GkM9J1
+R3
+Z26 w1557732141
+Z27 8C:/Users/ss/Desktop/CA3/CA3/CPU_Top.v
+Z28 FC:/Users/ss/Desktop/CA3/CA3/CPU_Top.v
+L0 1
+R7
+r1
+31
+R8
+Z29 n@c@p@u_@top
+Z30 !s100 JKa;iWhfTf][lh@SdLQ<i0
+Z31 !s108 1559121843.657000
+Z32 !s107 C:/Users/ss/Desktop/CA3/CA3/CPU_Top.v|
+Z33 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA3/CA3/CPU_Top.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vdatapath
+Z34 I1iTW_dbAj<Df<a^V0j9RN1
+Z35 VYk^aNGAEF5]cfCUFORibz2
+R3
+Z36 w1557732546
+Z37 8C:/Users/ss/Desktop/CA3/CA3/datapath.v
+Z38 FC:/Users/ss/Desktop/CA3/CA3/datapath.v
+L0 1
+R7
+r1
+31
+R8
+Z39 !s100 lkkNflS@aSU>B[<h2zGmD0
+Z40 !s108 1559121843.798000
+Z41 !s107 C:/Users/ss/Desktop/CA3/CA3/datapath.v|
+Z42 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA3/CA3/datapath.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vexp_controller
+Z43 I5aeGc3iEc10<9Uca2deGg1
+Z44 V@Rf6SW@;dciFUA;;<O;Ue0
+R3
+Z45 w1557732549
+Z46 8C:/Users/ss/Desktop/CA3/CA3/controller.v
+Z47 FC:/Users/ss/Desktop/CA3/CA3/controller.v
+L0 1
+R7
+r1
+31
+R8
+Z48 !s100 MmYWX>0UKc@dh4:Hc<Mo21
+Z49 !s108 1559121843.324000
+Z50 !s107 C:/Users/ss/Desktop/CA3/CA3/controller.v|
+Z51 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA3/CA3/controller.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMemory
+Z52 I@kBT:9m`Z4YF5od4KV8@92
+Z53 VT1W^?YQ7W7978LOnJ>2R=0
+R3
+Z54 w1557486868
+Z55 8C:/Users/ss/Desktop/CA3/CA3/Memory.v
+Z56 FC:/Users/ss/Desktop/CA3/CA3/Memory.v
+L0 1
+R7
+r1
+31
+R8
+Z57 n@memory
+Z58 !s100 N9TN;077SM8I^IBAE<@E01
+Z59 !s108 1559121843.945000
+Z60 !s107 C:/Users/ss/Desktop/CA3/CA3/Memory.v|
+Z61 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA3/CA3/Memory.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmux2to1
+Z62 IcG5ajbf7F<_NL;P^DGC]z2
+Z63 VR6c3W5kkPTCDXmIHM99452
+R3
+Z64 w1557483664
+Z65 8C:/Users/ss/Desktop/CA3/CA3/mux2to1.v
+Z66 FC:/Users/ss/Desktop/CA3/CA3/mux2to1.v
+L0 1
+R7
+r1
+31
+R8
+Z67 !s100 FBl;2f<SQQCS@l5e9NQ[n0
+Z68 !s108 1559121844.104000
+Z69 !s107 C:/Users/ss/Desktop/CA3/CA3/mux2to1.v|
+Z70 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA3/CA3/mux2to1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vPC
+Z71 I<hT[P3b5mBmUF9L2@o@Vh2
+Z72 V`Gb1ACE7k5PjLU;KBaXaz1
+R3
+Z73 w1557483665
+Z74 8C:/Users/ss/Desktop/CA3/CA3/PC.v
+Z75 FC:/Users/ss/Desktop/CA3/CA3/PC.v
+L0 2
+R7
+r1
+31
+R8
+n@p@c
+Z76 !s100 YVg:58EoLE3;I8;z?P?m]0
+Z77 !s108 1559121844.269000
+Z78 !s107 C:/Users/ss/Desktop/CA3/CA3/PC.v|
+Z79 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA3/CA3/PC.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vregister16b
+Z80 Iia<EAM;h[BYfbIzg`QhB@3
+Z81 V^i>WnPYG<]46dnn9W86mB3
+R3
+Z82 w1557483666
+Z83 8C:/Users/ss/Desktop/CA3/CA3/register16b.v
+Z84 FC:/Users/ss/Desktop/CA3/CA3/register16b.v
+L0 1
+R7
+r1
+31
+R8
+Z85 !s100 ?PJWS5]4a_CPMT7H6;zWe0
+Z86 !s108 1559121844.438000
+Z87 !s107 C:/Users/ss/Desktop/CA3/CA3/register16b.v|
+Z88 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA3/CA3/register16b.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vStack
+Z89 I7IOk@FNY<:TzeYhcY3fDL3
+Z90 V<SCheSU6QBm:a6`NeL<WC2
+R3
+Z91 w1557733108
+Z92 8C:/Users/ss/Desktop/CA3/CA3/Stack.v
+Z93 FC:/Users/ss/Desktop/CA3/CA3/Stack.v
+L0 1
+R7
+r1
+31
+R8
+Z94 n@stack
+!i10b 1
+Z95 !s100 3i[X:PR254a@=Jo3@SKI73
+!s85 0
+Z96 !s108 1559121844.585000
+Z97 !s107 C:/Users/ss/Desktop/CA3/CA3/Stack.v|
+Z98 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA3/CA3/Stack.v|
+!s101 -O0
+vStack_tb
+!i10b 1
+!s100 kSfPm`OaY;^VS^6`VJTlA3
+IlZ21?CMLo71B>c3De4bCE0
+Z99 Vc55gO3<RdKm^HN:bzBWHj3
+R3
+Z100 w1557482524
+8C:/Users/ss/Desktop/CA3/CA3/Stack_tb.v
+FC:/Users/ss/Desktop/CA3/CA3/Stack_tb.v
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1559121844.715000
+!s107 C:/Users/ss/Desktop/CA3/CA3/Stack_tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA3/CA3/Stack_tb.v|
+!s101 -O0
+R8
+Z101 n@stack_tb

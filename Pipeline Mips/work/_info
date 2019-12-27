@@ -1,0 +1,324 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\ss\Desktop\CA_CA3
+vALU
+Z1 !s100 U:[5m0O69j;U<mUP8O^Kl0
+Z2 ILUGhX0:4P3L]cghkZOEi;3
+Z3 V_TWLbWjY<?iXKPW^g[1B52
+Z4 dC:\Users\ss\Desktop\CA_CA4_20.00
+Z5 w1559326004
+Z6 8C:/Users/ss/Desktop/CA_CA4_20.00/ALU.v
+Z7 FC:/Users/ss/Desktop/CA_CA4_20.00/ALU.v
+L0 2
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/ALU.v|
+Z10 o-work work -O0
+Z11 n@a@l@u
+Z12 !s108 1559330200.167000
+Z13 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/ALU.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vconditionChecker
+Z14 !s100 `3XG=KD@T?URUV69hSOVI1
+Z15 I`<K9V23g3P1>EKo:eX:lY2
+Z16 VD410;gOY8NY0`mXTc^46H3
+R4
+Z17 w1559306006
+Z18 8C:/Users/ss/Desktop/CA_CA4_20.00/ConditionCheck.v
+Z19 FC:/Users/ss/Desktop/CA_CA4_20.00/ConditionCheck.v
+L0 1
+R8
+r1
+31
+Z20 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/ConditionCheck.v|
+R10
+Z21 ncondition@checker
+Z22 !s108 1559330200.282000
+Z23 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/ConditionCheck.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCPU_Controller
+Z24 !s100 GW]9J@zFcflOb7M@iV0]P1
+Z25 I:2;faAW4HVKzDO::LPcEg2
+Z26 V<`OU8EJbFYGcVc>EfP<L41
+R4
+Z27 w1559319967
+Z28 8C:/Users/ss/Desktop/CA_CA4_20.00/CPU_Controller.v
+Z29 FC:/Users/ss/Desktop/CA_CA4_20.00/CPU_Controller.v
+L0 2
+R8
+r1
+31
+Z30 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/CPU_Controller.v|
+R10
+Z31 n@c@p@u_@controller
+Z32 !s108 1559330200.442000
+Z33 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/CPU_Controller.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCPU_Data
+Z34 !s100 A9`C620=g8K=CB@fKCIKP0
+Z35 ISTNcE[XgNAYiH>YmE1^fV0
+Z36 VMF8WLDg=UglmEGn3U<h7`1
+R4
+Z37 w1559330177
+Z38 8C:/Users/ss/Desktop/CA_CA4_20.00/CPU_Datapath.v
+Z39 FC:/Users/ss/Desktop/CA_CA4_20.00/CPU_Datapath.v
+L0 2
+R8
+r1
+31
+Z40 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/CPU_Datapath.v|
+R10
+Z41 n@c@p@u_@data
+Z42 !s108 1559330200.573000
+Z43 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/CPU_Datapath.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCPU_TEST
+Z44 !s100 6LKBSD?S:zjSj86[V4_BN3
+Z45 IcJkP:a<8WSY18lL6^[bWQ3
+Z46 VI_bfnR[_>DoC1>cd73_371
+R4
+Z47 w1559304191
+Z48 8C:/Users/ss/Desktop/CA_CA4_20.00/CPU_TEST.v
+Z49 FC:/Users/ss/Desktop/CA_CA4_20.00/CPU_TEST.v
+L0 1
+R8
+r1
+31
+Z50 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/CPU_TEST.v|
+R10
+Z51 n@c@p@u_@t@e@s@t
+Z52 !s108 1559330200.718000
+Z53 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/CPU_TEST.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCPU_top
+Z54 !s100 CkESO:FB8Q]^:<zj>L57l1
+Z55 I<;LWdIhLkR;1LfCY6CMR[1
+Z56 V;?7?VH1>]1@DP5SokXL053
+R4
+Z57 w1559317936
+Z58 8C:/Users/ss/Desktop/CA_CA4_20.00/CPU_top.v
+Z59 FC:/Users/ss/Desktop/CA_CA4_20.00/CPU_top.v
+L0 1
+R8
+r1
+31
+Z60 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/CPU_top.v|
+R10
+Z61 n@c@p@u_top
+Z62 !s108 1559330200.878000
+Z63 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/CPU_top.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vData_Memory
+Z64 !s100 IDTaQda6Ua;zO0:VMT7FR3
+Z65 IEMYCR2KMcb_G>mU4>BQdP3
+Z66 V3TZX[XWGk3EKDX45C35bg2
+R4
+Z67 w1559313765
+Z68 8C:/Users/ss/Desktop/CA_CA4_20.00/Data_Memory.v
+Z69 FC:/Users/ss/Desktop/CA_CA4_20.00/Data_Memory.v
+L0 1
+R8
+r1
+31
+Z70 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/Data_Memory.v|
+R10
+Z71 n@data_@memory
+Z72 !s108 1559330201.041000
+Z73 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/Data_Memory.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vEX_Memreg
+Z74 !s100 fQkI7A<o^PbF4_EgC`D[[2
+Z75 I<L`Q8Xa1`hf^cBdh5_a4R2
+Z76 V<^UTdajATlTn?NoMG]ifO0
+R4
+Z77 w1559316356
+Z78 8C:/Users/ss/Desktop/CA_CA4_20.00/EX_MemReg.v
+Z79 FC:/Users/ss/Desktop/CA_CA4_20.00/EX_MemReg.v
+L0 2
+R8
+r1
+31
+Z80 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/EX_MemReg.v|
+R10
+Z81 n@e@x_@memreg
+Z82 !s108 1559330201.195000
+Z83 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/EX_MemReg.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vforwarding_EXE
+Z84 !s100 VSldOgUUPaXh<b4P@W7go1
+Z85 ISbIbY00^lK;Y9;IVIC0zf1
+Z86 VF09NZT2=<CGS@nkWQn0<k2
+R4
+Z87 w1559322279
+Z88 8C:/Users/ss/Desktop/CA_CA4_20.00/Forwarding.v
+Z89 FC:/Users/ss/Desktop/CA_CA4_20.00/Forwarding.v
+L0 1
+R8
+r1
+31
+Z90 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/Forwarding.v|
+R10
+Z91 nforwarding_@e@x@e
+Z92 !s108 1559330201.355000
+Z93 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/Forwarding.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vhazard_detection
+Z94 !s100 C55WKI6nlKjo4Y_cfJ`_W3
+Z95 IA=B?D8L:2gFIci[@T_Z:>2
+Z96 Vb5_=:@B6TcecDAVLD[L6H3
+R4
+Z97 w1559309704
+Z98 8C:/Users/ss/Desktop/CA_CA4_20.00/Hazard_Detect.v
+Z99 FC:/Users/ss/Desktop/CA_CA4_20.00/Hazard_Detect.v
+L0 2
+R8
+r1
+31
+Z100 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/Hazard_Detect.v|
+R10
+Z101 !s108 1559330201.484000
+Z102 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/Hazard_Detect.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vID_EXreg
+Z103 !s100 mO@nU6eO<Um3RDjWSFXcm3
+Z104 IQTj>N@@^4m?Mj1CCS:nb03
+Z105 VR_fh0Z`1`j23iTYHQfldF1
+R4
+Z106 w1559316380
+Z107 8C:/Users/ss/Desktop/CA_CA4_20.00/ID_EXreg.v
+Z108 FC:/Users/ss/Desktop/CA_CA4_20.00/ID_EXreg.v
+L0 3
+R8
+r1
+31
+Z109 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/ID_EXreg.v|
+R10
+Z110 n@i@d_@e@xreg
+Z111 !s108 1559330201.616000
+Z112 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/ID_EXreg.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vIF_IDreg
+Z113 !s100 OU;1lzg?nCc?X4h`k@_[Q3
+Z114 InTRgO5J><HKCjBi3a_USD2
+Z115 V>:M6J<f3Pnj8@TDLNm3d=0
+R4
+Z116 w1559316278
+Z117 8C:/Users/ss/Desktop/CA_CA4_20.00/IF_IDreg.v
+Z118 FC:/Users/ss/Desktop/CA_CA4_20.00/IF_IDreg.v
+L0 2
+R8
+r1
+31
+Z119 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/IF_IDreg.v|
+R10
+Z120 n@i@f_@i@dreg
+Z121 !s108 1559330201.743000
+Z122 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/IF_IDreg.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInstruction_Memory
+Z123 !s100 DbhXYHPXn^2]zQKkPmF;z0
+Z124 IEnkB9I>>NO`QRP8AYZ0LI3
+Z125 VMS5:j@b8=:AbBLkc9dT921
+R4
+Z126 w1558783298
+Z127 8C:/Users/ss/Desktop/CA_CA4_20.00/Instruction_Memory.v
+Z128 FC:/Users/ss/Desktop/CA_CA4_20.00/Instruction_Memory.v
+L0 2
+R8
+r1
+31
+Z129 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/Instruction_Memory.v|
+R10
+Z130 n@instruction_@memory
+Z131 !s108 1559330201.896000
+Z132 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/Instruction_Memory.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMem_WBreg
+Z133 !s100 WAZ3g=81g>meOgc5GkPOi1
+Z134 Ik``?GPNRca[8_^j`9RN@[0
+Z135 V[f^DHXQeMjAZDf2?mbkd61
+R4
+Z136 w1559316361
+Z137 8C:/Users/ss/Desktop/CA_CA4_20.00/Mem_WBReg.v
+Z138 FC:/Users/ss/Desktop/CA_CA4_20.00/Mem_WBReg.v
+L0 2
+R8
+r1
+31
+Z139 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/Mem_WBReg.v|
+R10
+Z140 n@mem_@w@breg
+Z141 !s108 1559330202.042000
+Z142 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/Mem_WBReg.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vPC_Reg
+Z143 !s100 h[P;a@;RmCQ:O8i9JYC8Q0
+Z144 IToVjzc<WdAYHPD8VVK9a;3
+Z145 VbNRbakeoO`ZRd1SXzV4=n3
+R4
+Z146 w1559312955
+Z147 8C:/Users/ss/Desktop/CA_CA4_20.00/PC_Register.v
+Z148 FC:/Users/ss/Desktop/CA_CA4_20.00/PC_Register.v
+L0 2
+R8
+r1
+31
+Z149 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/PC_Register.v|
+R10
+Z150 n@p@c_@reg
+!i10b 1
+!s85 0
+Z151 !s108 1559330202.169000
+Z152 !s107 C:/Users/ss/Desktop/CA_CA4_20.00/PC_Register.v|
+!s101 -O0
+vRegister_File
+!i10b 1
+Z153 !s100 DZ1K[J2LMgGURcZa8[Hc^2
+Z154 IkW]1knZ;g[WZ9@;^PoW_M0
+Z155 VEM]PX4GO0NS>gcRBUK4?L1
+R4
+Z156 w1559294130
+Z157 8C:/Users/ss/Desktop/CA_CA4_20.00/Register_File.v
+Z158 FC:/Users/ss/Desktop/CA_CA4_20.00/Register_File.v
+L0 2
+R8
+r1
+!s85 0
+31
+!s108 1559330202.335000
+!s107 C:/Users/ss/Desktop/CA_CA4_20.00/Register_File.v|
+Z159 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/CA_CA4_20.00/Register_File.v|
+!s101 -O0
+R10
+Z160 n@register_@file

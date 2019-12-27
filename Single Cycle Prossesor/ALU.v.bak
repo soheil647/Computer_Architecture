@@ -1,0 +1,47 @@
+
+module ALU(Op1,
+           Op2,
+           ALUOperation,
+           ALUresult,
+           Zero);
+           
+           
+  input[15:0] Op1 , Op2;
+  input[2:0] ALUOperation;
+  output reg[15:0] ALUresult;
+  output reg Zero;  
+  
+  
+  parameter AND = 3'b000;
+  parameter OR = 3'b001;
+  parameter Add = 3'b010;
+  parameter Sub = 3'b110;
+  
+  
+  always@(*) begin
+    Zero=0;
+    
+    case(ALUOperation) 
+      
+      AND: begin
+        ALUresult = Op1 & Op2;
+      end
+      
+      OR: begin
+        ALUresult = Op1 | Op2;
+      end
+      
+      Add: begin
+        ALUresult = Op1 + Op2;
+      end
+      
+      Sub: begin
+        ALUresult = Op1 - Op2;
+        if(ALUresult == 0)
+          Zero = 1;
+      end    
+      
+    endcase
+  end
+  
+endmodule

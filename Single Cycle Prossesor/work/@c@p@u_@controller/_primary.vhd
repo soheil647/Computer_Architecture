@@ -1,0 +1,61 @@
+library verilog;
+use verilog.vl_types.all;
+entity CPU_Controller is
+    generic(
+        Load            : vl_logic_vector(0 to 3) := (Hi0, Hi0, Hi0, Hi0);
+        Store           : vl_logic_vector(0 to 3) := (Hi0, Hi0, Hi0, Hi1);
+        Jump            : vl_logic_vector(0 to 3) := (Hi0, Hi0, Hi1, Hi0);
+        BranchZ         : vl_logic_vector(0 to 3) := (Hi0, Hi1, Hi0, Hi0);
+        RType           : vl_logic_vector(0 to 3) := (Hi1, Hi0, Hi0, Hi0);
+        Addi            : vl_logic_vector(0 to 3) := (Hi1, Hi1, Hi0, Hi0);
+        Subi            : vl_logic_vector(0 to 3) := (Hi1, Hi1, Hi0, Hi1);
+        Andi            : vl_logic_vector(0 to 3) := (Hi1, Hi1, Hi1, Hi0);
+        Ori             : vl_logic_vector(0 to 3) := (Hi1, Hi1, Hi1, Hi1);
+        Move            : vl_logic_vector(0 to 7) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi1);
+        Add             : vl_logic_vector(0 to 7) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi1, Hi0);
+        Sub             : vl_logic_vector(0 to 7) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi1, Hi0, Hi0);
+        \And\           : vl_logic_vector(0 to 7) := (Hi0, Hi0, Hi0, Hi0, Hi1, Hi0, Hi0, Hi0);
+        \Or\            : vl_logic_vector(0 to 7) := (Hi0, Hi0, Hi0, Hi1, Hi0, Hi0, Hi0, Hi0);
+        \Not\           : vl_logic_vector(0 to 7) := (Hi0, Hi0, Hi1, Hi0, Hi0, Hi0, Hi0, Hi0);
+        Nop             : vl_logic_vector(0 to 7) := (Hi0, Hi1, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0);
+        Wnd0            : vl_logic_vector(0 to 7) := (Hi1, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0);
+        Wnd1            : vl_logic_vector(0 to 7) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi1);
+        Wnd2            : vl_logic_vector(0 to 7) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi1, Hi0);
+        Wnd3            : vl_logic_vector(0 to 7) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi1, Hi1)
+    );
+    port(
+        Opcode          : in     vl_logic_vector(3 downto 0);
+        \Function\      : in     vl_logic_vector(7 downto 0);
+        Branch          : out    vl_logic;
+        JumpControl     : out    vl_logic;
+        MemRead         : out    vl_logic;
+        MemWrite        : out    vl_logic;
+        WriteControl    : out    vl_logic_vector(1 downto 0);
+        ALUSrc          : out    vl_logic;
+        RegWrite        : out    vl_logic;
+        WndSelect       : out    vl_logic_vector(1 downto 0);
+        ALUOprand       : out    vl_logic_vector(1 downto 0);
+        Rst             : in     vl_logic
+    );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of Load : constant is 1;
+    attribute mti_svvh_generic_type of Store : constant is 1;
+    attribute mti_svvh_generic_type of Jump : constant is 1;
+    attribute mti_svvh_generic_type of BranchZ : constant is 1;
+    attribute mti_svvh_generic_type of RType : constant is 1;
+    attribute mti_svvh_generic_type of Addi : constant is 1;
+    attribute mti_svvh_generic_type of Subi : constant is 1;
+    attribute mti_svvh_generic_type of Andi : constant is 1;
+    attribute mti_svvh_generic_type of Ori : constant is 1;
+    attribute mti_svvh_generic_type of Move : constant is 1;
+    attribute mti_svvh_generic_type of Add : constant is 1;
+    attribute mti_svvh_generic_type of Sub : constant is 1;
+    attribute mti_svvh_generic_type of \And\ : constant is 1;
+    attribute mti_svvh_generic_type of \Or\ : constant is 1;
+    attribute mti_svvh_generic_type of \Not\ : constant is 1;
+    attribute mti_svvh_generic_type of Nop : constant is 1;
+    attribute mti_svvh_generic_type of Wnd0 : constant is 1;
+    attribute mti_svvh_generic_type of Wnd1 : constant is 1;
+    attribute mti_svvh_generic_type of Wnd2 : constant is 1;
+    attribute mti_svvh_generic_type of Wnd3 : constant is 1;
+end CPU_Controller;

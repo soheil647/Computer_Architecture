@@ -1,0 +1,67 @@
+C:/Users/ss/Desktop/CA2/Register_File.v {1 {vlog -work work C:/Users/ss/Desktop/CA2/Register_File.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Register_File
+
+Top level modules:
+	Register_File
+
+} {} {}} C:/Users/ss/Desktop/CA2/Instruction_Memory.v {1 {vlog -work work C:/Users/ss/Desktop/CA2/Instruction_Memory.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Instruction_Memory
+
+Top level modules:
+	Instruction_Memory
+
+} {} {}} C:/Users/ss/Desktop/CA2/Data_Memory.v {1 {vlog -work work C:/Users/ss/Desktop/CA2/Data_Memory.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Data_Memory
+
+Top level modules:
+	Data_Memory
+
+} {} {}} C:/Users/ss/Desktop/CA2/CPU_top.v {1 {vlog -work work C:/Users/ss/Desktop/CA2/CPU_top.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module CPU_top
+
+Top level modules:
+	CPU_top
+
+} {} {}} C:/Users/ss/Desktop/CA2/CPU_Datapath.v {1 {vlog -work work C:/Users/ss/Desktop/CA2/CPU_Datapath.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module CPU_Data
+
+Top level modules:
+	CPU_Data
+
+} {} {}} C:/Users/ss/Desktop/CA2/component_TEST.v {1 {vlog -work work C:/Users/ss/Desktop/CA2/component_TEST.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+
+} {} {}} C:/Users/ss/Desktop/CA2/ALU.v {1 {vlog -work work C:/Users/ss/Desktop/CA2/ALU.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Users/ss/Desktop/CA2/CPU_TEST.v {1 {vlog -work work C:/Users/ss/Desktop/CA2/CPU_TEST.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module CPU_TEST
+
+Top level modules:
+	CPU_TEST
+
+} {} {}} C:/Users/ss/Desktop/CA2/PC_Register.v {1 {vlog -work work C:/Users/ss/Desktop/CA2/PC_Register.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module PC_Reg
+
+Top level modules:
+	PC_Reg
+
+} {} {}} C:/Users/ss/Desktop/CA2/CPU_Controller.v {1 {vlog -work work C:/Users/ss/Desktop/CA2/CPU_Controller.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module CPU_Controller
+
+Top level modules:
+	CPU_Controller
+
+} {} {}}

@@ -1,0 +1,43 @@
+lw R0 1000
+lw R1 1001
+nop
+slt R2 R0 R1
+nop
+nop
+beq R2 R3 5
+nop
+nop
+add R0 R1 R3
+lw R1 1002
+nop
+nop
+slt R2 R0 R1
+nop
+nop
+beq R2 R3 9
+nop
+nop
+add R0 R1 R3
+lw R1 1003
+nop
+nop
+slt R2 R0 R1
+nop
+nop
+beq R2 R3 13
+nop
+nop
+add R0 R1 R3
+lw R1 1004
+nop
+nop
+slt R2 R0 R1
+nop
+nop
+beq R2 R3 17
+nop
+nop
+add R0 R1 R3
+nop
+nop
+sw R0 10

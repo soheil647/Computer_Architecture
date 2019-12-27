@@ -1,0 +1,1142 @@
+TimeQuest Timing Analyzer report for CA12
+Sun Mar 10 09:40:54 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'Training_controller:U1|ps.000'
+ 13. Slow 1200mV 85C Model Setup: 'Clk'
+ 14. Slow 1200mV 85C Model Hold: 'Clk'
+ 15. Slow 1200mV 85C Model Hold: 'Training_controller:U1|ps.000'
+ 16. Slow 1200mV 85C Model Minimum Pulse Width: 'Clk'
+ 17. Slow 1200mV 85C Model Minimum Pulse Width: 'Training_controller:U1|ps.000'
+ 18. Setup Times
+ 19. Hold Times
+ 20. Clock to Output Times
+ 21. Minimum Clock to Output Times
+ 22. Slow 1200mV 85C Model Metastability Report
+ 23. Slow 1200mV 0C Model Fmax Summary
+ 24. Slow 1200mV 0C Model Setup Summary
+ 25. Slow 1200mV 0C Model Hold Summary
+ 26. Slow 1200mV 0C Model Recovery Summary
+ 27. Slow 1200mV 0C Model Removal Summary
+ 28. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Slow 1200mV 0C Model Setup: 'Training_controller:U1|ps.000'
+ 30. Slow 1200mV 0C Model Setup: 'Clk'
+ 31. Slow 1200mV 0C Model Hold: 'Clk'
+ 32. Slow 1200mV 0C Model Hold: 'Training_controller:U1|ps.000'
+ 33. Slow 1200mV 0C Model Minimum Pulse Width: 'Clk'
+ 34. Slow 1200mV 0C Model Minimum Pulse Width: 'Training_controller:U1|ps.000'
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Slow 1200mV 0C Model Metastability Report
+ 40. Fast 1200mV 0C Model Setup Summary
+ 41. Fast 1200mV 0C Model Hold Summary
+ 42. Fast 1200mV 0C Model Recovery Summary
+ 43. Fast 1200mV 0C Model Removal Summary
+ 44. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 45. Fast 1200mV 0C Model Setup: 'Training_controller:U1|ps.000'
+ 46. Fast 1200mV 0C Model Setup: 'Clk'
+ 47. Fast 1200mV 0C Model Hold: 'Clk'
+ 48. Fast 1200mV 0C Model Hold: 'Training_controller:U1|ps.000'
+ 49. Fast 1200mV 0C Model Minimum Pulse Width: 'Clk'
+ 50. Fast 1200mV 0C Model Minimum Pulse Width: 'Training_controller:U1|ps.000'
+ 51. Setup Times
+ 52. Hold Times
+ 53. Clock to Output Times
+ 54. Minimum Clock to Output Times
+ 55. Fast 1200mV 0C Model Metastability Report
+ 56. Multicorner Timing Analysis Summary
+ 57. Setup Times
+ 58. Hold Times
+ 59. Clock to Output Times
+ 60. Minimum Clock to Output Times
+ 61. Board Trace Model Assignments
+ 62. Input Transition Times
+ 63. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 64. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 65. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 66. Setup Transfers
+ 67. Hold Transfers
+ 68. Report TCCS
+ 69. Report RSKM
+ 70. Unconstrained Paths
+ 71. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; CA12                                                              ;
+; Device Family      ; Cyclone IV GX                                                     ;
+; Device Name        ; EP4CGX15BF14C6                                                    ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Enabled                                                           ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                       ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+; Clock Name                    ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                           ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+; Clk                           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Clk }                           ;
+; Training_controller:U1|ps.000 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Training_controller:U1|ps.000 } ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 805.15 MHz ; 250.0 MHz       ; Clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++--------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                    ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; Training_controller:U1|ps.000 ; -1.457 ; -1.457        ;
+; Clk                           ; -0.242 ; -0.860        ;
++-------------------------------+--------+---------------+
+
+
++-------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                    ;
++-------------------------------+-------+---------------+
+; Clock                         ; Slack ; End Point TNS ;
++-------------------------------+-------+---------------+
+; Clk                           ; 0.034 ; 0.000         ;
+; Training_controller:U1|ps.000 ; 1.332 ; 0.000         ;
++-------------------------------+-------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary      ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; Clk                           ; -3.000 ; -11.000       ;
+; Training_controller:U1|ps.000 ; 0.443  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'Training_controller:U1|ps.000'                                                                                                  ;
++--------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                      ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+; -1.457 ; Training_controller:U1|ps.001 ; Training_controller:U1|ready ; Clk          ; Training_controller:U1|ps.000 ; 1.000        ; -0.907     ; 0.660      ;
++--------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'Clk'                                                                                                                                    ;
++--------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; -0.242 ; Training_controller:U1|ps.001     ; Training_Datapath:U2|Reg2:Rt|o[0] ; Clk                           ; Clk         ; 1.000        ; 0.332      ; 1.569      ;
+; -0.242 ; Training_controller:U1|ps.001     ; Training_Datapath:U2|Reg2:Rt|o[1] ; Clk                           ; Clk         ; 1.000        ; 0.332      ; 1.569      ;
+; -0.224 ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.001     ; Clk                           ; Clk         ; 1.000        ; -0.038     ; 1.181      ;
+; -0.074 ; Training_Datapath:U2|Reg2:Rt|o[0] ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 1.000        ; -0.064     ; 1.005      ;
+; -0.074 ; Training_Datapath:U2|Reg2:Rt|o[0] ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 1.000        ; -0.064     ; 1.005      ;
+; -0.050 ; Training_controller:U1|ps.101     ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 1.000        ; -0.064     ; 0.981      ;
+; -0.049 ; Training_Datapath:U2|Reg2:Rt|o[1] ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 1.000        ; -0.064     ; 0.980      ;
+; -0.049 ; Training_Datapath:U2|Reg2:Rt|o[1] ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 1.000        ; -0.064     ; 0.980      ;
+; -0.007 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000 ; Clk         ; 0.500        ; 2.259      ; 2.960      ;
+; -0.004 ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.010     ; Clk                           ; Clk         ; 1.000        ; 0.332      ; 1.331      ;
+; 0.016  ; Training_controller:U1|ps.101     ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 1.000        ; -0.064     ; 0.915      ;
+; 0.109  ; Training_controller:U1|ps.010     ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 1.000        ; -0.064     ; 0.822      ;
+; 0.118  ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.000 ; Clk         ; 0.500        ; 1.854      ; 2.430      ;
+; 0.246  ; Training_controller:U1|ps.011     ; Training_controller:U1|ps.100     ; Clk                           ; Clk         ; 1.000        ; -0.064     ; 0.685      ;
+; 0.248  ; Training_controller:U1|ps.100     ; Training_controller:U1|ps.101     ; Clk                           ; Clk         ; 1.000        ; -0.064     ; 0.683      ;
+; 0.504  ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000 ; Clk         ; 1.000        ; 2.259      ; 2.949      ;
+; 0.622  ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.000 ; Clk         ; 1.000        ; 1.854      ; 2.426      ;
++--------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'Clk'                                                                                                                                    ;
++-------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; 0.034 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.000 ; Clk         ; 0.000        ; 1.927      ; 2.337      ;
+; 0.038 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000 ; Clk         ; 0.000        ; 2.349      ; 2.763      ;
+; 0.370 ; Training_controller:U1|ps.011     ; Training_controller:U1|ps.100     ; Clk                           ; Clk         ; 0.000        ; 0.064      ; 0.591      ;
+; 0.371 ; Training_controller:U1|ps.100     ; Training_controller:U1|ps.101     ; Clk                           ; Clk         ; 0.000        ; 0.064      ; 0.592      ;
+; 0.480 ; Training_controller:U1|ps.010     ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 0.000        ; 0.064      ; 0.701      ;
+; 0.530 ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.010     ; Clk                           ; Clk         ; 0.000        ; 0.495      ; 1.182      ;
+; 0.537 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.000 ; Clk         ; -0.500       ; 1.927      ; 2.340      ;
+; 0.553 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000 ; Clk         ; -0.500       ; 2.349      ; 2.778      ;
+; 0.589 ; Training_controller:U1|ps.101     ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 0.000        ; 0.064      ; 0.810      ;
+; 0.628 ; Training_controller:U1|ps.101     ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 0.000        ; 0.064      ; 0.849      ;
+; 0.656 ; Training_Datapath:U2|Reg2:Rt|o[1] ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 0.000        ; 0.064      ; 0.877      ;
+; 0.656 ; Training_Datapath:U2|Reg2:Rt|o[1] ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 0.000        ; 0.064      ; 0.877      ;
+; 0.668 ; Training_Datapath:U2|Reg2:Rt|o[0] ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 0.000        ; 0.064      ; 0.889      ;
+; 0.668 ; Training_Datapath:U2|Reg2:Rt|o[0] ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 0.000        ; 0.064      ; 0.889      ;
+; 0.870 ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.001     ; Clk                           ; Clk         ; 0.000        ; 0.038      ; 1.065      ;
+; 0.931 ; Training_controller:U1|ps.001     ; Training_Datapath:U2|Reg2:Rt|o[0] ; Clk                           ; Clk         ; 0.000        ; 0.495      ; 1.583      ;
+; 0.931 ; Training_controller:U1|ps.001     ; Training_Datapath:U2|Reg2:Rt|o[1] ; Clk                           ; Clk         ; 0.000        ; 0.495      ; 1.583      ;
++-------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'Training_controller:U1|ps.000'                                                                                                  ;
++-------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                      ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+; 1.332 ; Training_controller:U1|ps.001 ; Training_controller:U1|ready ; Clk          ; Training_controller:U1|ps.000 ; 0.000        ; -0.792     ; 0.560      ;
++-------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'Clk'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; Clk   ; Rise       ; Clk                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[0] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[1] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.000     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.001     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.010     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.011     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.100     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.101     ;
+; 0.158  ; 0.342        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.001     ;
+; 0.214  ; 0.398        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[0] ;
+; 0.214  ; 0.398        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[1] ;
+; 0.214  ; 0.398        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.000     ;
+; 0.214  ; 0.398        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.010     ;
+; 0.214  ; 0.398        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.011     ;
+; 0.214  ; 0.398        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.100     ;
+; 0.214  ; 0.398        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.101     ;
+; 0.320  ; 0.320        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.001|clk                     ;
+; 0.326  ; 0.326        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; Clk~input|o                       ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; Clk~inputclkctrl|inclk[0]         ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; Clk~inputclkctrl|outclk           ;
+; 0.374  ; 0.374        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.000|clk                     ;
+; 0.374  ; 0.374        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.010|clk                     ;
+; 0.374  ; 0.374        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.011|clk                     ;
+; 0.374  ; 0.374        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.100|clk                     ;
+; 0.374  ; 0.374        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.101|clk                     ;
+; 0.374  ; 0.374        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U2|Rt|o[0]|clk                    ;
+; 0.374  ; 0.374        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U2|Rt|o[1]|clk                    ;
+; 0.386  ; 0.602        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[0] ;
+; 0.386  ; 0.602        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[1] ;
+; 0.386  ; 0.602        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.000     ;
+; 0.386  ; 0.602        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.010     ;
+; 0.386  ; 0.602        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.011     ;
+; 0.386  ; 0.602        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.100     ;
+; 0.386  ; 0.602        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.101     ;
+; 0.440  ; 0.656        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.001     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; Clk~input|i                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; Clk~input|i                       ;
+; 0.624  ; 0.624        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.000|clk                     ;
+; 0.624  ; 0.624        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.010|clk                     ;
+; 0.624  ; 0.624        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.011|clk                     ;
+; 0.624  ; 0.624        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.100|clk                     ;
+; 0.624  ; 0.624        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.101|clk                     ;
+; 0.624  ; 0.624        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U2|Rt|o[0]|clk                    ;
+; 0.624  ; 0.624        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U2|Rt|o[1]|clk                    ;
+; 0.662  ; 0.662        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; Clk~inputclkctrl|inclk[0]         ;
+; 0.662  ; 0.662        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; Clk~inputclkctrl|outclk           ;
+; 0.674  ; 0.674        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; Clk~input|o                       ;
+; 0.680  ; 0.680        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.001|clk                     ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'Training_controller:U1|ps.000'                                                           ;
++-------+--------------+----------------+------------------+-------------------------------+------------+------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                         ; Clock Edge ; Target                       ;
++-------+--------------+----------------+------------------+-------------------------------+------------+------------------------------+
+; 0.443 ; 0.443        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Rise       ; U1|WideOr2~0|datac           ;
+; 0.449 ; 0.449        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Fall       ; U1|WideOr2~0|combout         ;
+; 0.475 ; 0.475        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Rise       ; Training_controller:U1|ready ;
+; 0.477 ; 0.477        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Fall       ; U1|ready|datac               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Rise       ; U1|ps.000|q                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Rise       ; U1|ps.000|q                  ;
+; 0.521 ; 0.521        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Fall       ; U1|ready|datac               ;
+; 0.523 ; 0.523        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Rise       ; Training_controller:U1|ready ;
+; 0.548 ; 0.548        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Fall       ; U1|WideOr2~0|combout         ;
+; 0.554 ; 0.554        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Rise       ; U1|WideOr2~0|datac           ;
++-------+--------------+----------------+------------------+-------------------------------+------------+------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Rst       ; Clk        ; 2.818 ; 3.211 ; Rise       ; Clk             ;
+; Start     ; Clk        ; 3.339 ; 3.746 ; Rise       ; Clk             ;
+; t[*]      ; Clk        ; 2.333 ; 2.761 ; Rise       ; Clk             ;
+;  t[0]     ; Clk        ; 1.490 ; 1.912 ; Rise       ; Clk             ;
+;  t[1]     ; Clk        ; 2.333 ; 2.761 ; Rise       ; Clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Rst       ; Clk        ; -1.557 ; -1.979 ; Rise       ; Clk             ;
+; Start     ; Clk        ; -2.159 ; -2.543 ; Rise       ; Clk             ;
+; t[*]      ; Clk        ; -1.108 ; -1.510 ; Rise       ; Clk             ;
+;  t[0]     ; Clk        ; -1.108 ; -1.510 ; Rise       ; Clk             ;
+;  t[1]     ; Clk        ; -1.929 ; -2.346 ; Rise       ; Clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                  ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; ready     ; Training_controller:U1|ps.000 ; 4.127 ; 4.011 ; Rise       ; Training_controller:U1|ps.000 ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                          ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; ready     ; Training_controller:U1|ps.000 ; 3.996 ; 3.881 ; Rise       ; Training_controller:U1|ps.000 ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 878.73 MHz ; 250.0 MHz       ; Clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                     ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; Training_controller:U1|ps.000 ; -1.234 ; -1.234        ;
+; Clk                           ; -0.138 ; -0.370        ;
++-------------------------------+--------+---------------+
+
+
++-------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                     ;
++-------------------------------+-------+---------------+
+; Clock                         ; Slack ; End Point TNS ;
++-------------------------------+-------+---------------+
+; Clk                           ; 0.018 ; 0.000         ;
+; Training_controller:U1|ps.000 ; 1.223 ; 0.000         ;
++-------------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary       ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; Clk                           ; -3.000 ; -11.000       ;
+; Training_controller:U1|ps.000 ; 0.462  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'Training_controller:U1|ps.000'                                                                                                   ;
++--------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                      ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+; -1.234 ; Training_controller:U1|ps.001 ; Training_controller:U1|ready ; Clk          ; Training_controller:U1|ps.000 ; 1.000        ; -0.844     ; 0.593      ;
++--------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'Clk'                                                                                                                                     ;
++--------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; -0.138 ; Training_controller:U1|ps.001     ; Training_Datapath:U2|Reg2:Rt|o[0] ; Clk                           ; Clk         ; 1.000        ; 0.278      ; 1.411      ;
+; -0.138 ; Training_controller:U1|ps.001     ; Training_Datapath:U2|Reg2:Rt|o[1] ; Clk                           ; Clk         ; 1.000        ; 0.278      ; 1.411      ;
+; -0.094 ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.001     ; Clk                           ; Clk         ; 1.000        ; -0.034     ; 1.055      ;
+; 0.041  ; Training_Datapath:U2|Reg2:Rt|o[0] ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 1.000        ; -0.057     ; 0.897      ;
+; 0.041  ; Training_Datapath:U2|Reg2:Rt|o[0] ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 1.000        ; -0.057     ; 0.897      ;
+; 0.051  ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000 ; Clk         ; 0.500        ; 2.043      ; 2.667      ;
+; 0.062  ; Training_Datapath:U2|Reg2:Rt|o[1] ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 1.000        ; -0.057     ; 0.876      ;
+; 0.062  ; Training_Datapath:U2|Reg2:Rt|o[1] ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 1.000        ; -0.057     ; 0.876      ;
+; 0.070  ; Training_controller:U1|ps.101     ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 1.000        ; -0.057     ; 0.868      ;
+; 0.091  ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.010     ; Clk                           ; Clk         ; 1.000        ; 0.278      ; 1.182      ;
+; 0.123  ; Training_controller:U1|ps.101     ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 1.000        ; -0.057     ; 0.815      ;
+; 0.201  ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.000 ; Clk         ; 0.500        ; 1.700      ; 2.174      ;
+; 0.206  ; Training_controller:U1|ps.010     ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 1.000        ; -0.057     ; 0.732      ;
+; 0.333  ; Training_controller:U1|ps.011     ; Training_controller:U1|ps.100     ; Clk                           ; Clk         ; 1.000        ; -0.057     ; 0.605      ;
+; 0.333  ; Training_controller:U1|ps.100     ; Training_controller:U1|ps.101     ; Clk                           ; Clk         ; 1.000        ; -0.057     ; 0.605      ;
+; 0.541  ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000 ; Clk         ; 1.000        ; 2.043      ; 2.677      ;
+; 0.665  ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.000 ; Clk         ; 1.000        ; 1.700      ; 2.210      ;
++--------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'Clk'                                                                                                                                     ;
++-------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; 0.018 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.000 ; Clk         ; 0.000        ; 1.765      ; 2.127      ;
+; 0.043 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000 ; Clk         ; 0.000        ; 2.123      ; 2.510      ;
+; 0.335 ; Training_controller:U1|ps.011     ; Training_controller:U1|ps.100     ; Clk                           ; Clk         ; 0.000        ; 0.057      ; 0.536      ;
+; 0.335 ; Training_controller:U1|ps.100     ; Training_controller:U1|ps.101     ; Clk                           ; Clk         ; 0.000        ; 0.057      ; 0.536      ;
+; 0.434 ; Training_controller:U1|ps.010     ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 0.000        ; 0.057      ; 0.635      ;
+; 0.485 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.000 ; Clk         ; -0.500       ; 1.765      ; 2.094      ;
+; 0.515 ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.010     ; Clk                           ; Clk         ; 0.000        ; 0.423      ; 1.082      ;
+; 0.529 ; Training_controller:U1|ps.101     ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 0.000        ; 0.057      ; 0.730      ;
+; 0.538 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000 ; Clk         ; -0.500       ; 2.123      ; 2.505      ;
+; 0.568 ; Training_controller:U1|ps.101     ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 0.000        ; 0.057      ; 0.769      ;
+; 0.583 ; Training_Datapath:U2|Reg2:Rt|o[1] ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 0.000        ; 0.057      ; 0.784      ;
+; 0.583 ; Training_Datapath:U2|Reg2:Rt|o[1] ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 0.000        ; 0.057      ; 0.784      ;
+; 0.600 ; Training_Datapath:U2|Reg2:Rt|o[0] ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 0.000        ; 0.057      ; 0.801      ;
+; 0.600 ; Training_Datapath:U2|Reg2:Rt|o[0] ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 0.000        ; 0.057      ; 0.801      ;
+; 0.788 ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.001     ; Clk                           ; Clk         ; 0.000        ; 0.034      ; 0.966      ;
+; 0.875 ; Training_controller:U1|ps.001     ; Training_Datapath:U2|Reg2:Rt|o[0] ; Clk                           ; Clk         ; 0.000        ; 0.423      ; 1.442      ;
+; 0.875 ; Training_controller:U1|ps.001     ; Training_Datapath:U2|Reg2:Rt|o[1] ; Clk                           ; Clk         ; 0.000        ; 0.423      ; 1.442      ;
++-------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'Training_controller:U1|ps.000'                                                                                                   ;
++-------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                      ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+; 1.223 ; Training_controller:U1|ps.001 ; Training_controller:U1|ready ; Clk          ; Training_controller:U1|ps.000 ; 0.000        ; -0.738     ; 0.505      ;
++-------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'Clk'                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; Clk   ; Rise       ; Clk                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[0] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[1] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.000     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.001     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.010     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.011     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.100     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.101     ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.001     ;
+; 0.218  ; 0.402        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[0] ;
+; 0.218  ; 0.402        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[1] ;
+; 0.218  ; 0.402        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.000     ;
+; 0.218  ; 0.402        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.010     ;
+; 0.218  ; 0.402        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.011     ;
+; 0.218  ; 0.402        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.100     ;
+; 0.218  ; 0.402        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.101     ;
+; 0.329  ; 0.329        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.001|clk                     ;
+; 0.344  ; 0.344        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; Clk~input|o                       ;
+; 0.346  ; 0.346        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; Clk~inputclkctrl|inclk[0]         ;
+; 0.346  ; 0.346        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; Clk~inputclkctrl|outclk           ;
+; 0.378  ; 0.378        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.000|clk                     ;
+; 0.378  ; 0.378        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.010|clk                     ;
+; 0.378  ; 0.378        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.011|clk                     ;
+; 0.378  ; 0.378        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.100|clk                     ;
+; 0.378  ; 0.378        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.101|clk                     ;
+; 0.378  ; 0.378        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U2|Rt|o[0]|clk                    ;
+; 0.378  ; 0.378        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U2|Rt|o[1]|clk                    ;
+; 0.381  ; 0.597        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[0] ;
+; 0.381  ; 0.597        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[1] ;
+; 0.381  ; 0.597        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.000     ;
+; 0.381  ; 0.597        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.010     ;
+; 0.381  ; 0.597        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.011     ;
+; 0.381  ; 0.597        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.100     ;
+; 0.381  ; 0.597        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.101     ;
+; 0.430  ; 0.646        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.001     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; Clk~input|i                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; Clk~input|i                       ;
+; 0.621  ; 0.621        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.000|clk                     ;
+; 0.621  ; 0.621        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.010|clk                     ;
+; 0.621  ; 0.621        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.011|clk                     ;
+; 0.621  ; 0.621        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.100|clk                     ;
+; 0.621  ; 0.621        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.101|clk                     ;
+; 0.621  ; 0.621        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U2|Rt|o[0]|clk                    ;
+; 0.621  ; 0.621        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U2|Rt|o[1]|clk                    ;
+; 0.654  ; 0.654        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; Clk~inputclkctrl|inclk[0]         ;
+; 0.654  ; 0.654        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; Clk~inputclkctrl|outclk           ;
+; 0.656  ; 0.656        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; Clk~input|o                       ;
+; 0.670  ; 0.670        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.001|clk                     ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'Training_controller:U1|ps.000'                                                            ;
++-------+--------------+----------------+------------------+-------------------------------+------------+------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                         ; Clock Edge ; Target                       ;
++-------+--------------+----------------+------------------+-------------------------------+------------+------------------------------+
+; 0.462 ; 0.462        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Rise       ; U1|WideOr2~0|datac           ;
+; 0.463 ; 0.463        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Fall       ; U1|WideOr2~0|combout         ;
+; 0.479 ; 0.479        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Rise       ; Training_controller:U1|ready ;
+; 0.484 ; 0.484        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Fall       ; U1|ready|datac               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Rise       ; U1|ps.000|q                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Rise       ; U1|ps.000|q                  ;
+; 0.515 ; 0.515        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Fall       ; U1|ready|datac               ;
+; 0.520 ; 0.520        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Rise       ; Training_controller:U1|ready ;
+; 0.537 ; 0.537        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Fall       ; U1|WideOr2~0|combout         ;
+; 0.537 ; 0.537        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Rise       ; U1|WideOr2~0|datac           ;
++-------+--------------+----------------+------------------+-------------------------------+------------+------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Rst       ; Clk        ; 2.421 ; 2.751 ; Rise       ; Clk             ;
+; Start     ; Clk        ; 2.902 ; 3.253 ; Rise       ; Clk             ;
+; t[*]      ; Clk        ; 2.027 ; 2.342 ; Rise       ; Clk             ;
+;  t[0]     ; Clk        ; 1.246 ; 1.583 ; Rise       ; Clk             ;
+;  t[1]     ; Clk        ; 2.027 ; 2.342 ; Rise       ; Clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Rst       ; Clk        ; -1.322 ; -1.645 ; Rise       ; Clk             ;
+; Start     ; Clk        ; -1.843 ; -2.171 ; Rise       ; Clk             ;
+; t[*]      ; Clk        ; -0.907 ; -1.230 ; Rise       ; Clk             ;
+;  t[0]     ; Clk        ; -0.907 ; -1.230 ; Rise       ; Clk             ;
+;  t[1]     ; Clk        ; -1.668 ; -1.976 ; Rise       ; Clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                  ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; ready     ; Training_controller:U1|ps.000 ; 3.666 ; 3.562 ; Rise       ; Training_controller:U1|ps.000 ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                          ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; ready     ; Training_controller:U1|ps.000 ; 3.543 ; 3.440 ; Rise       ; Training_controller:U1|ps.000 ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                     ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; Training_controller:U1|ps.000 ; -0.418 ; -0.418        ;
+; Clk                           ; 0.237  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
++--------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                      ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; Clk                           ; -0.070 ; -0.088        ;
+; Training_controller:U1|ps.000 ; 0.773  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary       ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; Clk                           ; -3.000 ; -11.204       ;
+; Training_controller:U1|ps.000 ; 0.453  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'Training_controller:U1|ps.000'                                                                                                   ;
++--------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                      ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+; -0.418 ; Training_controller:U1|ps.001 ; Training_controller:U1|ready ; Clk          ; Training_controller:U1|ps.000 ; 1.000        ; -0.554     ; 0.362      ;
++--------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'Clk'                                                                                                                                    ;
++-------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; 0.237 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000 ; Clk         ; 0.500        ; 1.299      ; 1.654      ;
+; 0.269 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.000 ; Clk         ; 0.500        ; 1.057      ; 1.380      ;
+; 0.317 ; Training_controller:U1|ps.001     ; Training_Datapath:U2|Reg2:Rt|o[0] ; Clk                           ; Clk         ; 1.000        ; 0.198      ; 0.868      ;
+; 0.317 ; Training_controller:U1|ps.001     ; Training_Datapath:U2|Reg2:Rt|o[1] ; Clk                           ; Clk         ; 1.000        ; 0.198      ; 0.868      ;
+; 0.330 ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.001     ; Clk                           ; Clk         ; 1.000        ; -0.022     ; 0.635      ;
+; 0.403 ; Training_Datapath:U2|Reg2:Rt|o[0] ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 1.000        ; -0.037     ; 0.547      ;
+; 0.403 ; Training_Datapath:U2|Reg2:Rt|o[0] ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 1.000        ; -0.037     ; 0.547      ;
+; 0.414 ; Training_controller:U1|ps.101     ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 1.000        ; -0.037     ; 0.536      ;
+; 0.416 ; Training_Datapath:U2|Reg2:Rt|o[1] ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 1.000        ; -0.037     ; 0.534      ;
+; 0.416 ; Training_Datapath:U2|Reg2:Rt|o[1] ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 1.000        ; -0.037     ; 0.534      ;
+; 0.450 ; Training_controller:U1|ps.101     ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 1.000        ; -0.037     ; 0.500      ;
+; 0.450 ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.010     ; Clk                           ; Clk         ; 1.000        ; 0.198      ; 0.735      ;
+; 0.504 ; Training_controller:U1|ps.010     ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 1.000        ; -0.037     ; 0.446      ;
+; 0.577 ; Training_controller:U1|ps.011     ; Training_controller:U1|ps.100     ; Clk                           ; Clk         ; 1.000        ; -0.037     ; 0.373      ;
+; 0.578 ; Training_controller:U1|ps.100     ; Training_controller:U1|ps.101     ; Clk                           ; Clk         ; 1.000        ; -0.037     ; 0.372      ;
+; 0.749 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000 ; Clk         ; 1.000        ; 1.299      ; 1.642      ;
+; 0.862 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.000 ; Clk         ; 1.000        ; 1.057      ; 1.287      ;
++-------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'Clk'                                                                                                                                      ;
++--------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; -0.070 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.000 ; Clk         ; 0.000        ; 1.101      ; 1.240      ;
+; -0.018 ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000 ; Clk         ; 0.000        ; 1.352      ; 1.543      ;
+; 0.193  ; Training_controller:U1|ps.011     ; Training_controller:U1|ps.100     ; Clk                           ; Clk         ; 0.000        ; 0.037      ; 0.314      ;
+; 0.193  ; Training_controller:U1|ps.100     ; Training_controller:U1|ps.101     ; Clk                           ; Clk         ; 0.000        ; 0.037      ; 0.314      ;
+; 0.245  ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.010     ; Clk                           ; Clk         ; 0.000        ; 0.295      ; 0.624      ;
+; 0.255  ; Training_controller:U1|ps.010     ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 0.000        ; 0.037      ; 0.376      ;
+; 0.315  ; Training_controller:U1|ps.101     ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 0.000        ; 0.037      ; 0.436      ;
+; 0.339  ; Training_controller:U1|ps.101     ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 0.000        ; 0.037      ; 0.460      ;
+; 0.353  ; Training_Datapath:U2|Reg2:Rt|o[0] ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 0.000        ; 0.037      ; 0.474      ;
+; 0.354  ; Training_Datapath:U2|Reg2:Rt|o[0] ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 0.000        ; 0.037      ; 0.475      ;
+; 0.354  ; Training_Datapath:U2|Reg2:Rt|o[1] ; Training_controller:U1|ps.011     ; Clk                           ; Clk         ; 0.000        ; 0.037      ; 0.475      ;
+; 0.355  ; Training_Datapath:U2|Reg2:Rt|o[1] ; Training_controller:U1|ps.000     ; Clk                           ; Clk         ; 0.000        ; 0.037      ; 0.476      ;
+; 0.456  ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.001     ; Clk                           ; Clk         ; 0.000        ; 0.022      ; 0.562      ;
+; 0.467  ; Training_controller:U1|ps.001     ; Training_Datapath:U2|Reg2:Rt|o[0] ; Clk                           ; Clk         ; 0.000        ; 0.295      ; 0.846      ;
+; 0.467  ; Training_controller:U1|ps.001     ; Training_Datapath:U2|Reg2:Rt|o[1] ; Clk                           ; Clk         ; 0.000        ; 0.295      ; 0.846      ;
+; 0.491  ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.000 ; Clk         ; -0.500       ; 1.352      ; 1.552      ;
+; 0.519  ; Training_controller:U1|ps.000     ; Training_controller:U1|ps.001     ; Training_controller:U1|ps.000 ; Clk         ; -0.500       ; 1.101      ; 1.329      ;
++--------+-----------------------------------+-----------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'Training_controller:U1|ps.000'                                                                                                   ;
++-------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                      ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+; 0.773 ; Training_controller:U1|ps.001 ; Training_controller:U1|ready ; Clk          ; Training_controller:U1|ps.000 ; 0.000        ; -0.487     ; 0.306      ;
++-------+-------------------------------+------------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'Clk'                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; Clk   ; Rise       ; Clk                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[0] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[1] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.000     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.001     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.010     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.011     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.100     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; Clk   ; Rise       ; Training_controller:U1|ps.101     ;
+; -0.026 ; 0.158        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[0] ;
+; -0.026 ; 0.158        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[1] ;
+; -0.026 ; 0.158        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.000     ;
+; -0.026 ; 0.158        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.010     ;
+; -0.026 ; 0.158        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.011     ;
+; -0.026 ; 0.158        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.100     ;
+; -0.026 ; 0.158        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.101     ;
+; -0.022 ; 0.162        ; 0.184          ; Low Pulse Width  ; Clk   ; Rise       ; Training_controller:U1|ps.001     ;
+; 0.125  ; 0.125        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; Clk~input|o                       ;
+; 0.139  ; 0.139        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; Clk~inputclkctrl|inclk[0]         ;
+; 0.139  ; 0.139        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; Clk~inputclkctrl|outclk           ;
+; 0.153  ; 0.153        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.000|clk                     ;
+; 0.153  ; 0.153        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.010|clk                     ;
+; 0.153  ; 0.153        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.011|clk                     ;
+; 0.153  ; 0.153        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.100|clk                     ;
+; 0.153  ; 0.153        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.101|clk                     ;
+; 0.153  ; 0.153        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U2|Rt|o[0]|clk                    ;
+; 0.153  ; 0.153        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U2|Rt|o[1]|clk                    ;
+; 0.156  ; 0.156        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; U1|ps.001|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; Clk~input|i                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clk   ; Rise       ; Clk~input|i                       ;
+; 0.622  ; 0.838        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.001     ;
+; 0.625  ; 0.841        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[0] ;
+; 0.625  ; 0.841        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_Datapath:U2|Reg2:Rt|o[1] ;
+; 0.625  ; 0.841        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.000     ;
+; 0.625  ; 0.841        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.010     ;
+; 0.625  ; 0.841        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.011     ;
+; 0.625  ; 0.841        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.100     ;
+; 0.625  ; 0.841        ; 0.216          ; High Pulse Width ; Clk   ; Rise       ; Training_controller:U1|ps.101     ;
+; 0.842  ; 0.842        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.001|clk                     ;
+; 0.846  ; 0.846        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.000|clk                     ;
+; 0.846  ; 0.846        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.010|clk                     ;
+; 0.846  ; 0.846        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.011|clk                     ;
+; 0.846  ; 0.846        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.100|clk                     ;
+; 0.846  ; 0.846        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U1|ps.101|clk                     ;
+; 0.846  ; 0.846        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U2|Rt|o[0]|clk                    ;
+; 0.846  ; 0.846        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; U2|Rt|o[1]|clk                    ;
+; 0.861  ; 0.861        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; Clk~inputclkctrl|inclk[0]         ;
+; 0.861  ; 0.861        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; Clk~inputclkctrl|outclk           ;
+; 0.875  ; 0.875        ; 0.000          ; High Pulse Width ; Clk   ; Rise       ; Clk~input|o                       ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'Training_controller:U1|ps.000'                                                            ;
++-------+--------------+----------------+------------------+-------------------------------+------------+------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                         ; Clock Edge ; Target                       ;
++-------+--------------+----------------+------------------+-------------------------------+------------+------------------------------+
+; 0.453 ; 0.453        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Rise       ; U1|WideOr2~0|datac           ;
+; 0.457 ; 0.457        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Fall       ; U1|WideOr2~0|combout         ;
+; 0.476 ; 0.476        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Fall       ; U1|ready|datac               ;
+; 0.479 ; 0.479        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Rise       ; Training_controller:U1|ready ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Rise       ; U1|ps.000|q                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Rise       ; U1|ps.000|q                  ;
+; 0.520 ; 0.520        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Rise       ; Training_controller:U1|ready ;
+; 0.523 ; 0.523        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Fall       ; U1|ready|datac               ;
+; 0.541 ; 0.541        ; 0.000          ; Low Pulse Width  ; Training_controller:U1|ps.000 ; Fall       ; U1|WideOr2~0|combout         ;
+; 0.545 ; 0.545        ; 0.000          ; High Pulse Width ; Training_controller:U1|ps.000 ; Rise       ; U1|WideOr2~0|datac           ;
++-------+--------------+----------------+------------------+-------------------------------+------------+------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Rst       ; Clk        ; 1.571 ; 2.125 ; Rise       ; Clk             ;
+; Start     ; Clk        ; 1.900 ; 2.411 ; Rise       ; Clk             ;
+; t[*]      ; Clk        ; 1.274 ; 1.864 ; Rise       ; Clk             ;
+;  t[0]     ; Clk        ; 0.828 ; 1.384 ; Rise       ; Clk             ;
+;  t[1]     ; Clk        ; 1.274 ; 1.864 ; Rise       ; Clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Rst       ; Clk        ; -0.865 ; -1.431 ; Rise       ; Clk             ;
+; Start     ; Clk        ; -1.203 ; -1.733 ; Rise       ; Clk             ;
+; t[*]      ; Clk        ; -0.613 ; -1.156 ; Rise       ; Clk             ;
+;  t[0]     ; Clk        ; -0.613 ; -1.156 ; Rise       ; Clk             ;
+;  t[1]     ; Clk        ; -1.045 ; -1.628 ; Rise       ; Clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                  ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; ready     ; Training_controller:U1|ps.000 ; 2.392 ; 2.386 ; Rise       ; Training_controller:U1|ps.000 ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                          ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; ready     ; Training_controller:U1|ps.000 ; 2.314 ; 2.307 ; Rise       ; Training_controller:U1|ps.000 ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                         ;
++--------------------------------+--------+--------+----------+---------+---------------------+
+; Clock                          ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------------+--------+--------+----------+---------+---------------------+
+; Worst-case Slack               ; -1.457 ; -0.070 ; N/A      ; N/A     ; -3.000              ;
+;  Clk                           ; -0.242 ; -0.070 ; N/A      ; N/A     ; -3.000              ;
+;  Training_controller:U1|ps.000 ; -1.457 ; 0.773  ; N/A      ; N/A     ; 0.443               ;
+; Design-wide TNS                ; -2.317 ; -0.088 ; 0.0      ; 0.0     ; -11.204             ;
+;  Clk                           ; -0.860 ; -0.088 ; N/A      ; N/A     ; -11.204             ;
+;  Training_controller:U1|ps.000 ; -1.457 ; 0.000  ; N/A      ; N/A     ; 0.000               ;
++--------------------------------+--------+--------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Rst       ; Clk        ; 2.818 ; 3.211 ; Rise       ; Clk             ;
+; Start     ; Clk        ; 3.339 ; 3.746 ; Rise       ; Clk             ;
+; t[*]      ; Clk        ; 2.333 ; 2.761 ; Rise       ; Clk             ;
+;  t[0]     ; Clk        ; 1.490 ; 1.912 ; Rise       ; Clk             ;
+;  t[1]     ; Clk        ; 2.333 ; 2.761 ; Rise       ; Clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Rst       ; Clk        ; -0.865 ; -1.431 ; Rise       ; Clk             ;
+; Start     ; Clk        ; -1.203 ; -1.733 ; Rise       ; Clk             ;
+; t[*]      ; Clk        ; -0.613 ; -1.156 ; Rise       ; Clk             ;
+;  t[0]     ; Clk        ; -0.613 ; -1.156 ; Rise       ; Clk             ;
+;  t[1]     ; Clk        ; -1.045 ; -1.628 ; Rise       ; Clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                  ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; ready     ; Training_controller:U1|ps.000 ; 4.127 ; 4.011 ; Rise       ; Training_controller:U1|ps.000 ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                          ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+; ready     ; Training_controller:U1|ps.000 ; 2.314 ; 2.307 ; Rise       ; Training_controller:U1|ps.000 ;
++-----------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; ready         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_NCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++-------------------------------------------------------------------+
+; Input Transition Times                                            ;
++----------------+--------------+-----------------+-----------------+
+; Pin            ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++----------------+--------------+-----------------+-----------------+
+; x1[0]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x1[1]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x1[2]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x1[3]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x1[4]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x1[5]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x1[6]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x2[0]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x2[1]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x2[2]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x2[3]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x2[4]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x2[5]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x2[6]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Start          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Rst            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Clk            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; t[0]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; t[1]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO~  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_NCSO~  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++----------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ready         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00339 V          ; 0.206 V                              ; 0.007 V                              ; 2.77e-10 s                  ; 3.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00339 V         ; 0.206 V                             ; 0.007 V                             ; 2.77e-10 s                 ; 3.24e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_NCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.76e-09 V                   ; 2.4 V               ; -0.034 V            ; 0.102 V                              ; 0.065 V                              ; 2.49e-10 s                  ; 3.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.76e-09 V                  ; 2.4 V              ; -0.034 V           ; 0.102 V                             ; 0.065 V                             ; 2.49e-10 s                 ; 3.49e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.94e-09 V                   ; 2.39 V              ; -0.0344 V           ; 0.156 V                              ; 0.089 V                              ; 2.68e-10 s                  ; 2.6e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.94e-09 V                  ; 2.39 V             ; -0.0344 V          ; 0.156 V                             ; 0.089 V                             ; 2.68e-10 s                 ; 2.6e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ready         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.37 V              ; -0.00606 V          ; 0.107 V                              ; 0.021 V                              ; 4.26e-10 s                  ; 4.03e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.37 V             ; -0.00606 V         ; 0.107 V                             ; 0.021 V                             ; 4.26e-10 s                 ; 4.03e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_NCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.93e-07 V                   ; 2.37 V              ; -0.0278 V           ; 0.106 V                              ; 0.115 V                              ; 2.69e-10 s                  ; 4.05e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.93e-07 V                  ; 2.37 V             ; -0.0278 V          ; 0.106 V                             ; 0.115 V                             ; 2.69e-10 s                 ; 4.05e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.76e-07 V                   ; 2.36 V              ; -0.00439 V          ; 0.088 V                              ; 0.007 V                              ; 4.05e-10 s                  ; 3.35e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.76e-07 V                  ; 2.36 V             ; -0.00439 V         ; 0.088 V                             ; 0.007 V                             ; 4.05e-10 s                 ; 3.35e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ready         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.73 V              ; -0.0205 V           ; 0.17 V                               ; 0.027 V                              ; 2.58e-10 s                  ; 2.57e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.73 V             ; -0.0205 V          ; 0.17 V                              ; 0.027 V                             ; 2.58e-10 s                 ; 2.57e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_NCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.06e-08 V                   ; 2.86 V              ; -0.0341 V           ; 0.364 V                              ; 0.046 V                              ; 1.17e-10 s                  ; 2.6e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 3.06e-08 V                  ; 2.86 V             ; -0.0341 V          ; 0.364 V                             ; 0.046 V                             ; 1.17e-10 s                 ; 2.6e-10 s                  ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.81e-08 V                   ; 2.72 V              ; -0.0542 V           ; 0.144 V                              ; 0.087 V                              ; 2.55e-10 s                  ; 2.14e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.81e-08 V                  ; 2.72 V             ; -0.0542 V          ; 0.144 V                             ; 0.087 V                             ; 2.55e-10 s                 ; 2.14e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                           ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; Clk                           ; Clk                           ; 13       ; 0        ; 0        ; 0        ;
+; Training_controller:U1|ps.000 ; Clk                           ; 2        ; 2        ; 0        ; 0        ;
+; Clk                           ; Training_controller:U1|ps.000 ; 1        ; 0        ; 0        ; 0        ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                            ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; Clk                           ; Clk                           ; 13       ; 0        ; 0        ; 0        ;
+; Training_controller:U1|ps.000 ; Clk                           ; 2        ; 2        ; 0        ; 0        ;
+; Clk                           ; Training_controller:U1|ps.000 ; 1        ; 0        ; 0        ; 0        ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 13    ; 13   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Mar 10 09:40:51 2019
+Info: Command: quartus_sta CA12 -c CA12
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'CA12.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Clk Clk
+    Info (332105): create_clock -period 1.000 -name Training_controller:U1|ps.000 Training_controller:U1|ps.000
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.457
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.457        -1.457 Training_controller:U1|ps.000 
+    Info (332119):    -0.242        -0.860 Clk 
+Info (332146): Worst-case hold slack is 0.034
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.034         0.000 Clk 
+    Info (332119):     1.332         0.000 Training_controller:U1|ps.000 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -11.000 Clk 
+    Info (332119):     0.443         0.000 Training_controller:U1|ps.000 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.234
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.234        -1.234 Training_controller:U1|ps.000 
+    Info (332119):    -0.138        -0.370 Clk 
+Info (332146): Worst-case hold slack is 0.018
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.018         0.000 Clk 
+    Info (332119):     1.223         0.000 Training_controller:U1|ps.000 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -11.000 Clk 
+    Info (332119):     0.462         0.000 Training_controller:U1|ps.000 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.418
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.418        -0.418 Training_controller:U1|ps.000 
+    Info (332119):     0.237         0.000 Clk 
+Info (332146): Worst-case hold slack is -0.070
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.070        -0.088 Clk 
+    Info (332119):     0.773         0.000 Training_controller:U1|ps.000 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -11.204 Clk 
+    Info (332119):     0.453         0.000 Training_controller:U1|ps.000 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4622 megabytes
+    Info: Processing ended: Sun Mar 10 09:40:54 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

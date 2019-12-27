@@ -1,0 +1,18 @@
+<interfaceDefinition version='1.2' language='verilog' kind='module' name='ALU'>
+    <macroList>
+
+      <macro name='AND' initializer='2&apos;b00' type='' paramKind='parameter'> </macro>
+      <macro name='NOT' initializer='2&apos;b01' type='' paramKind='parameter'> </macro>
+      <macro name='Add' initializer='2&apos;b10' type='' paramKind='parameter'> </macro>
+      <macro name='Sub' initializer='2&apos;b11' type='' paramKind='parameter'> </macro>
+
+    </macroList>
+    <portList>
+
+      <port name='Op1' direction='input' type='[7:0]' kind='array' packedDimension='[7:0]'> </port>
+      <port name='Op2' direction='input' type='[7:0]' kind='array' packedDimension='[7:0]'> </port>
+      <port name='ALUOperation' direction='input' type='[1:0]' kind='array' packedDimension='[1:0]'> </port>
+      <port name='ALUresult' direction='output' type='[7:0]' kind='regvector' packedDimension='[7:0]'> </port>
+
+    </portList>
+</interfaceDefinition>

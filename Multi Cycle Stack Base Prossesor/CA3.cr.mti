@@ -1,0 +1,78 @@
+C:/Users/ss/Desktop/CA3/CA3/CPU_TB.v {1 {vlog -work work C:/Users/ss/Desktop/CA3/CA3/CPU_TB.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module CPU_TB
+
+Top level modules:
+	CPU_TB
+
+} {} {}} C:/Users/ss/Desktop/CA3/CA3/Memory.v {1 {vlog -work work C:/Users/ss/Desktop/CA3/CA3/Memory.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Memory
+
+Top level modules:
+	Memory
+
+} {} {}} C:/Users/ss/Desktop/CA3/CA3/ALU.v {1 {vlog -work work C:/Users/ss/Desktop/CA3/CA3/ALU.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Users/ss/Desktop/CA3/CA3/CPU_Top.v {1 {vlog -work work C:/Users/ss/Desktop/CA3/CA3/CPU_Top.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module CPU_Top
+
+Top level modules:
+	CPU_Top
+
+} {} {}} C:/Users/ss/Desktop/CA3/CA3/register16b.v {1 {vlog -work work C:/Users/ss/Desktop/CA3/CA3/register16b.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module register16b
+
+Top level modules:
+	register16b
+
+} {} {}} C:/Users/ss/Desktop/CA3/CA3/Stack.v {1 {vlog -work work C:/Users/ss/Desktop/CA3/CA3/Stack.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Stack
+
+Top level modules:
+	Stack
+
+} {} {}} C:/Users/ss/Desktop/CA3/CA3/datapath.v {1 {vlog -work work C:/Users/ss/Desktop/CA3/CA3/datapath.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module datapath
+
+Top level modules:
+	datapath
+
+} {} {}} C:/Users/ss/Desktop/CA3/CA3/PC.v {1 {vlog -work work C:/Users/ss/Desktop/CA3/CA3/PC.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} C:/Users/ss/Desktop/CA3/CA3/Stack_tb.v {1 {vlog -work work C:/Users/ss/Desktop/CA3/CA3/Stack_tb.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Stack_tb
+
+Top level modules:
+	Stack_tb
+
+} {} {}} C:/Users/ss/Desktop/CA3/CA3/controller.v {1 {vlog -work work C:/Users/ss/Desktop/CA3/CA3/controller.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module exp_controller
+
+Top level modules:
+	exp_controller
+
+} {} {}} C:/Users/ss/Desktop/CA3/CA3/mux2to1.v {1 {vlog -work work C:/Users/ss/Desktop/CA3/CA3/mux2to1.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mux2to1
+
+Top level modules:
+	mux2to1
+
+} {} {}}
